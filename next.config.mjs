@@ -1,8 +1,9 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: ["files.edgestore.dev"],
-  },
-};
+import withPWA from "next-pwa";
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
+
+export default withPWA({
+  ...nextConfig,
+  dest: "public",
+});

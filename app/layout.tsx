@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ConvexClientPrivider } from "@/components/providers/convex-provider";
 import ModalProvider from "@/components/providers/modal-provider";
 import { EdgeStoreProvider } from "@/lib/edgestore";
+import { useEffect } from "react";
+import ThemeManager from "./themeManager";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,6 +47,7 @@ export default function RootLayout({
             >
               <Toaster position="bottom-center" />
               <ModalProvider />
+              <ThemeManager />
               {children}
             </ThemeProvider>
           </EdgeStoreProvider>
